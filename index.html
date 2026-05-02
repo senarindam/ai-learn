@@ -25,7 +25,8 @@
       <nav class="top-nav" aria-label="Primary navigation">
         <a href="#audiences">Audiences</a>
         <a href="#concepts">Concepts</a>
-        <a href="#evolution">Evolution</a>
+        <a href="#diagram">Diagram</a>
+        <a href="#diagram">Diagram</a>
         <a href="#workflow">How they work</a>
       </nav>
     </header>
@@ -111,6 +112,55 @@
             <h3>AI Agents</h3>
             <p>Goal-driven systems that use models, memory, tools, and feedback loops.</p>
           </div>
+        </div>
+      </section>
+
+      <section class="section diagram-section" id="diagram">
+        <div class="section-heading">
+          <p class="eyebrow">Colorful system diagram</p>
+          <h2>How humans, agents, models, tools, and feedback talk</h2>
+          <p>
+            An AI agent is the coordinator. It reads the human goal, chooses the
+            right model or tool, checks the result, and loops back for approval
+            when the work needs human judgment.
+          </p>
+        </div>
+        <div class="talk-diagram" aria-label="Diagram showing how AI components communicate">
+          <div class="diagram-node human-node">
+            <span>01</span>
+            <strong>Human goal</strong>
+            <p>Ask, decide, approve, and give feedback.</p>
+          </div>
+          <div class="diagram-node agent-node">
+            <span>02</span>
+            <strong>AI agent</strong>
+            <p>Plans steps, routes tasks, remembers context, and checks progress.</p>
+          </div>
+          <div class="diagram-node llm-node">
+            <span>03</span>
+            <strong>LLM</strong>
+            <p>Handles broad reasoning, writing, explanation, and synthesis.</p>
+          </div>
+          <div class="diagram-node slm-node">
+            <span>04</span>
+            <strong>SLM</strong>
+            <p>Handles focused, fast, private, or low-cost repeated tasks.</p>
+          </div>
+          <div class="diagram-node tools-node">
+            <span>05</span>
+            <strong>Tools + data</strong>
+            <p>Search, files, calendars, CRM, code, calculators, and databases.</p>
+          </div>
+          <div class="diagram-node feedback-node">
+            <span>06</span>
+            <strong>Feedback loop</strong>
+            <p>Review, correct, approve, retry, and improve the next answer.</p>
+          </div>
+          <div class="diagram-line line-human-agent"></div>
+          <div class="diagram-line line-agent-llm"></div>
+          <div class="diagram-line line-agent-slm"></div>
+          <div class="diagram-line line-agent-tools"></div>
+          <div class="diagram-line line-feedback"></div>
         </div>
       </section>
 

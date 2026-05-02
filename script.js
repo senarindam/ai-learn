@@ -7,6 +7,11 @@ const audiences = [
       "Learn AI through stories, helpers, games, and examples you see at home or school.",
     benefit: "Use AI to ask better questions, practice reading, and make learning playful.",
     voice: "Simple words, short examples, and friendly analogies.",
+    details: {
+      bestUse: "Turn lessons into stories, quizzes, drawings, and small practice steps.",
+      watchOut: "AI can sound confident even when it is wrong, so ask a teacher or parent to check important answers.",
+      nextStep: "Pick one school topic and ask AI to explain it with a story, a quiz, and three new words.",
+    },
     lessons: {
       llm: {
         title: "LLM: A giant story helper",
@@ -42,6 +47,11 @@ const audiences = [
       "Connect AI basics to experiments, homework, creativity, and safe internet habits.",
     benefit: "Use AI as a study coach while learning to verify facts and avoid copying.",
     voice: "Clear explanations with examples from science, coding, and daily decisions.",
+    details: {
+      bestUse: "Use AI for revision plans, experiment ideas, vocabulary drills, and step-by-step explanations.",
+      watchOut: "Do not copy full answers. Use AI to understand, then write in your own words.",
+      nextStep: "Ask AI for a study plan, then ask it to include source-checking and self-test questions.",
+    },
     lessons: {
       llm: {
         title: "LLM: Pattern engine for language",
@@ -77,6 +87,11 @@ const audiences = [
       "Use AI for exams, career choices, projects, and the transition into higher education.",
     benefit: "Turn AI into a tutor, research assistant, and career exploration partner.",
     voice: "Practical, exam-aware, and oriented toward independent thinking.",
+    details: {
+      bestUse: "Practice exam answers, compare career paths, summarize research, and improve project structure.",
+      watchOut: "For exams and applications, your own reasoning and evidence matter more than polished AI text.",
+      nextStep: "Choose one subject and ask AI to create a two-week revision plan with daily practice tasks.",
+    },
     lessons: {
       llm: {
         title: "LLM: General reasoning interface",
@@ -112,6 +127,11 @@ const audiences = [
       "Understand how AI systems are built, evaluated, deployed, and connected to real products.",
     benefit: "Use AI for learning, prototyping, debugging, documentation, and research.",
     voice: "Technical enough to map concepts to architecture without assuming work experience.",
+    details: {
+      bestUse: "Prototype RAG apps, debug code, generate tests, explain papers, and document engineering decisions.",
+      watchOut: "Model output is not a substitute for tests, benchmarks, security review, or understanding the code.",
+      nextStep: "Build a mini assistant over your notes that retrieves context before asking an LLM to answer.",
+    },
     lessons: {
       llm: {
         title: "LLM: Foundation model layer",
@@ -147,6 +167,11 @@ const audiences = [
       "Apply AI to productivity, quality, communication, and smarter team workflows.",
     benefit: "Delegate repetitive work while improving judgment, review, and decision speed.",
     voice: "Business-practical with enough depth to choose the right tool.",
+    details: {
+      bestUse: "Summarize meetings, draft communications, create checklists, classify requests, and prepare first drafts.",
+      watchOut: "Keep sensitive company data, customer information, and final decisions under approved controls.",
+      nextStep: "Pick one weekly workflow and define what AI drafts, what you review, and what remains human-only.",
+    },
     lessons: {
       llm: {
         title: "LLM: Knowledge work accelerator",
@@ -182,6 +207,11 @@ const audiences = [
       "Use AI to redesign processes, mentor teams, and build measurable operating leverage.",
     benefit: "Move from personal productivity to team-level systems and governance.",
     voice: "Strategic, operational, and focused on adoption risk.",
+    details: {
+      bestUse: "Redesign processes, standardize knowledge workflows, coach teams, and measure AI-assisted outcomes.",
+      watchOut: "Unmanaged AI usage can create inconsistent quality, data exposure, and unclear accountability.",
+      nextStep: "Create a simple AI playbook with approved use cases, review rules, and success metrics.",
+    },
     lessons: {
       llm: {
         title: "LLM: Capability platform",
@@ -217,6 +247,11 @@ const audiences = [
       "Translate AI concepts into team productivity, customer value, and measurable outcomes.",
     benefit: "Prioritize use cases, reduce operational friction, and manage responsible adoption.",
     voice: "Outcome-led, non-jargon, and decision-focused.",
+    details: {
+      bestUse: "Improve reporting, customer insight, team follow-ups, process routing, and decision preparation.",
+      watchOut: "Automation should not remove human judgment where errors affect customers, money, or trust.",
+      nextStep: "Rank three AI opportunities by business value, data risk, reversibility, and ease of review.",
+    },
     lessons: {
       llm: {
         title: "LLM: Communication and insight engine",
@@ -252,6 +287,11 @@ const audiences = [
       "See AI as a strategic capability affecting products, costs, talent, moat, and speed.",
     benefit: "Build an AI adoption thesis that balances ambition, risk, governance, and defensibility.",
     voice: "Executive, concise, and oriented toward capital allocation.",
+    details: {
+      bestUse: "Identify strategic leverage, proprietary data advantages, product shifts, cost curves, and operating speed.",
+      watchOut: "A chatbot is not a strategy. Durable advantage needs workflow integration, data, talent, and governance.",
+      nextStep: "Ask each function for one AI use case tied to revenue, margin, speed, or customer experience.",
+    },
     lessons: {
       llm: {
         title: "LLM: Strategic interface shift",
@@ -287,6 +327,11 @@ const audiences = [
       "Learn AI through daily life: planning, budgeting, learning, health questions, and family support.",
     benefit: "Use AI as a practical assistant while keeping privacy and judgment in your hands.",
     voice: "Warm, clear, respectful, and grounded in household examples.",
+    details: {
+      bestUse: "Plan meals, organize errands, help with children's learning, translate messages, and manage reminders.",
+      watchOut: "Do not share private IDs, bank details, medical records, passwords, or family-sensitive information.",
+      nextStep: "Ask AI to make a weekly family plan with meals, study time, errands, and a shopping list.",
+    },
     lessons: {
       llm: {
         title: "LLM: Everyday explanation helper",
@@ -363,6 +408,7 @@ function renderTopics() {
 
 function renderLesson() {
   const lesson = selectedAudience.lessons[selectedTopic];
+  const details = selectedAudience.details;
 
   guideTitle.textContent = selectedAudience.title;
   guideIntro.textContent = selectedAudience.intro;
@@ -381,6 +427,20 @@ function renderLesson() {
     <div class="action-box">
       <strong>3rd-click action</strong>
       <p>${lesson.action}</p>
+    </div>
+    <div class="audience-detail-grid">
+      <div>
+        <strong>Best use for this audience</strong>
+        <p>${details.bestUse}</p>
+      </div>
+      <div>
+        <strong>Watch out</strong>
+        <p>${details.watchOut}</p>
+      </div>
+      <div>
+        <strong>Next step</strong>
+        <p>${details.nextStep}</p>
+      </div>
     </div>
   `;
 
