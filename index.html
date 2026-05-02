@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI Compass | Learn LLMs, SLMs & Agents</title>
+    <meta
+      name="description"
+      content="A three-click AI learning guide that explains LLMs, SLMs, AI agents, and how they work together for different audiences."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="#home" aria-label="AI Compass home">
+        <span class="brand-mark">AI</span>
+        <span>Compass</span>
+      </a>
+      <nav class="top-nav" aria-label="Primary navigation">
+        <a href="#audiences">Audiences</a>
+        <a href="#concepts">Concepts</a>
+        <a href="#evolution">Evolution</a>
+        <a href="#workflow">How they work</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero" id="home">
+        <div class="hero-copy">
+          <p class="eyebrow">A 3-click learning guide for everyone</p>
+          <h1>Understand AI, LLMs, SLMs, and agents in your own language.</h1>
+          <p class="hero-text">
+            Choose who you are, see the AI ideas that matter to you, and learn how
+            today's models and agents talk to each other to get useful work done.
+          </p>
+          <div class="hero-actions">
+            <a class="button primary" href="#audiences">Pick your audience</a>
+            <a class="button secondary" href="#concepts">Explore concepts</a>
+          </div>
+          <div class="click-rule" aria-label="Three click rule">
+            <span>Click 1: Audience</span>
+            <span>Click 2: Topic</span>
+            <span>Click 3: Action</span>
+          </div>
+        </div>
+        <div class="hero-visual" aria-hidden="true">
+          <div class="orbit orbit-one"></div>
+          <div class="orbit orbit-two"></div>
+          <div class="node node-llm">LLM</div>
+          <div class="node node-slm">SLM</div>
+          <div class="node node-agent">Agent</div>
+          <div class="center-chip">AI</div>
+        </div>
+      </section>
+
+      <section class="section" id="audiences">
+        <div class="section-heading">
+          <p class="eyebrow">Step 1</p>
+          <h2>Choose the learning path</h2>
+          <p>
+            The same AI idea is explained differently for each audience, from a
+            class 5 learner to a CEO making strategic decisions.
+          </p>
+        </div>
+        <div class="audience-grid" id="audienceGrid"></div>
+      </section>
+
+      <section class="section split-section" id="guide">
+        <div class="guide-panel">
+          <p class="eyebrow">Step 2</p>
+          <h2 id="guideTitle">Student, Class 5</h2>
+          <p id="guideIntro"></p>
+          <div class="topic-tabs" id="topicTabs" aria-label="AI topics"></div>
+        </div>
+        <article class="lesson-card" id="lessonCard" aria-live="polite"></article>
+      </section>
+
+      <section class="section" id="concepts">
+        <div class="section-heading">
+          <p class="eyebrow">Simple definitions</p>
+          <h2>The AI family tree</h2>
+          <p>
+            AI is the broader goal. Models are the engines. Agents are the workers
+            that plan, use tools, and coordinate models to complete tasks.
+          </p>
+        </div>
+        <div class="concept-map">
+          <div class="concept-card ai-card">
+            <span>01</span>
+            <h3>Artificial Intelligence</h3>
+            <p>Systems that sense, reason, predict, create, or act in ways we call intelligent.</p>
+          </div>
+          <div class="concept-card">
+            <span>02</span>
+            <h3>Large Language Models</h3>
+            <p>Broad, powerful language models trained on massive text and code collections.</p>
+          </div>
+          <div class="concept-card">
+            <span>03</span>
+            <h3>Small Language Models</h3>
+            <p>Compact models optimized for speed, privacy, cost, and focused domain tasks.</p>
+          </div>
+          <div class="concept-card">
+            <span>04</span>
+            <h3>AI Agents</h3>
+            <p>Goal-driven systems that use models, memory, tools, and feedback loops.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section workflow" id="workflow">
+        <div class="section-heading">
+          <p class="eyebrow">How they talk</p>
+          <h2>From question to useful result</h2>
+          <p>
+            A practical AI system is usually a conversation between people,
+            models, tools, data, and feedback.
+          </p>
+        </div>
+        <div class="workflow-track">
+          <div class="workflow-step">
+            <strong>Human goal</strong>
+            <p>"Plan my study timetable" or "Analyze our customer churn."</p>
+          </div>
+          <div class="workflow-step">
+            <strong>Agent planner</strong>
+            <p>Breaks the goal into steps, asks clarifying questions, and chooses tools.</p>
+          </div>
+          <div class="workflow-step">
+            <strong>LLM + SLM team</strong>
+            <p>The LLM reasons broadly; SLMs handle faster, focused, private tasks.</p>
+          </div>
+          <div class="workflow-step">
+            <strong>Tools and feedback</strong>
+            <p>Search, databases, calculators, documents, and people improve the answer.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section evolution" id="evolution">
+        <div class="section-heading">
+          <p class="eyebrow">How AI is evolving</p>
+          <h2>From prediction to action</h2>
+          <p>
+            The big shift is from AI that only answers questions to AI that can
+            help plan, use tools, remember context, and safely execute work.
+          </p>
+        </div>
+        <div class="timeline">
+          <article>
+            <span>Past</span>
+            <h3>Rules and classic ML</h3>
+            <p>
+              Systems followed explicit rules or learned narrow patterns, such
+              as spam detection, recommendations, and forecasting.
+            </p>
+          </article>
+          <article>
+            <span>Now</span>
+            <h3>LLMs and SLMs</h3>
+            <p>
+              Large models handle broad reasoning and language. Small models
+              bring focused, faster, cheaper intelligence into products.
+            </p>
+          </article>
+          <article>
+            <span>Next</span>
+            <h3>Agents and teams of models</h3>
+            <p>
+              Agents coordinate models, tools, memory, permissions, and human
+              approvals to complete real workflows responsibly.
+            </p>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>Designed so every major learning destination is reachable within three clicks.</p>
+      <a href="#home">Back to top</a>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
